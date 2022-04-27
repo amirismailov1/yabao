@@ -1,0 +1,42 @@
+.home{
+    padding-bottom: 39px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    column-gap: 70px;
+
+}
+.link{
+    color: var(--black);
+}
+.item{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--black);
+}
+.right{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+.enter{
+    font-weight: 700;
+    font-size: 16px;
+    color: #696F7A;
+}
+.cart{
+    border-radius: 8px;
+    background-color: var(--pink);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 7px 25px;
+}

@@ -1,0 +1,81 @@
+.header{
+    padding: 8px 0 7px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    column-gap: 14px;
+    width: 100%;
+
+}
+.logoText{
+
+}
+.title{
+    font-weight: 800;
+    font-size: 39px;
+
+    color: var(--black);
+}
+.subtitle{
+    font-weight: 600;
+    font-size: 10px;
+
+    text-transform: uppercase;
+    color: var(--black);
+}
+.infoTitle{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--black);
+}
+.infoTitlePink{
+    color: var(--pink);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.infoTime{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: var(--black);
+}
+.infoCircle{
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--pink);
+}
+.call{
+    display: flex;
+    column-gap: 28px;
+    align-items: center;
+}
+.btn{
+    background: #F3F3F7;
+    border-radius: 28px;
+    width: 180px;
+    height: 42px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: #696F7A;
+}
+.number{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+ color: var(--pink);
+    text-transform: uppercase
+}
+

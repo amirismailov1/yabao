@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+:root{
+    --pink:#FF2E65;
+    --black: #231F20;
+}

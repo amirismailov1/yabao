@@ -1,0 +1,274 @@
+{
+  "users": [
+
+  ],
+  "sushi": [
+    {
+      "id": 1,
+      "title":"Горячая креветка",
+      "composition": "Тигровые креветки, сыр, розовый соус, унаги соус 240 гр",
+      "price": 280,
+      "image": "Assets/Sushi/sushi1.jpg"
+    },
+    {
+      "id": 2,
+      "title":"Горячая курица",
+      "composition": "Курица, сыр, розовый соус, унаги соус, кунжут 240 гр",
+      "price": 220,
+      "image": "Assets/Sushi/sushi1.jpg"
+    },
+    {
+      "id": 3,
+      "title":"Горячий краб",
+      "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+      "price": 250,
+      "image": "Assets/Sushi/sushi1.jpg"
+    },
+    {
+      "id": 4,
+      "title":"Горячий лосось",
+      "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
+      "price": 300,
+      "image": "Assets/Sushi/sushi1.jpg"
+    },
+    {
+      "id": 5,
+      "title":"Кани темпура",
+      "composition": "Снежный краб, авокадо, сыр, унаги соус",
+      "price": 290,
+      "image": "Assets/Sushi/sushi2.jpg"
+    },
+    {
+      "id": 6,
+      "title":"Саке темпура",
+      "composition": "Лосось, авокадо, сыр, унаги соус 220 гр",
+      "price": 350,
+      "image": "Assets/Sushi/sushi2.jpg"
+    },
+    {
+      "id": 7,
+      "title":"Унаги темпура",
+      "composition": "Угорь, авокадо, сливочный сыр, унаги соус 240 гр",
+      "price": 350,
+      "image": "Assets/Sushi/sushi2.jpg"
+    },
+    {
+      "id": 8,
+      "title":"Чикин темпура",
+      "composition": "Курица, авокадо, сыр, унаги соус 230 гр",
+      "price": 260,
+      "image": "Assets/Sushi/sushi2.jpg"
+    }
+  ],
+  "set": [
+
+    {
+      "id": 1,
+      "title":"4 сезона",
+      "composition": "Горячий краб, Горячий лосось, Горячая креветка, Горячая курица. 32 штуки, 840 грамм",
+      "price": 980,
+      "image": "Assets/Set/set1.jpg"
+    },
+    {
+      "id": 2,
+      "title":"Запеченный хосомаки",
+      "composition": "Ролл лосось, Ролл краб, Ролл угорь, Ролл креветка, Ролл сыр. 30 штук, 580 грамм",
+      "price": 650,
+      "image": "Assets/Set/set2.jpg"
+    },
+    {
+      "id": 3,
+      "title":"Классика",
+      "composition": "Филадельфия, Канада, Калифорния. 24 штуки, 720 грамм",
+      "price": 1130,
+      "image": "Assets/Set/set3.jpg"
+    },
+    {
+      "id": 4,
+      "title":"Романтика",
+      "composition": "Филадельфия, Калифорния, Ролл краб под сыром, Хот лосось 4 шт, Фудзияма 4 шт. 30 штук, 840 грамм",
+      "price": 1300,
+      "image": "Assets/Set/set4.jpg"
+    },
+    {
+      "id": 5,
+      "title":"Сет 1",
+      "composition": "Филадельфия 4 шт, Канада 4 шт, Нью-Йорк 4 шт, Бруклин 4 шт. 16 штук, 520 грамм",
+      "price": 730,
+      "image": "Assets/Set/set5.jpg"
+    },
+    {
+      "id": 6,
+      "title":"Сет 10",
+      "composition": "Шеф-ролл кунжут, Филадельфия, Мини филадельфия, Бонито, Нью-Йорк. 40 штук, 1170 грамм",
+      "price": 1400,
+      "image": "Assets/Set/set6.jpg"
+    },
+    {
+      "id": 7,
+      "title":"Сет 11",
+      "composition": "Фила премиум, Канада премиум, Фила делюкс. 24 штуки, 770 грамм",
+      "price": 1700,
+      "image": "Assets/Set/set7.jpg"
+    },
+    {
+      "id": 8,
+      "title":"Хосомаки",
+      "composition": "Ролл краб, Ролл лосось, Ролл огурец, Ролл сыр. 24 штуки, 400 грамм",
+      "price": 480,
+      "image": "Assets/Set/set8.jpg"
+    }
+  ],
+  "soup": [
+
+    {
+      "id": 1,
+      "title":"Кимчи",
+      "composition": "Кимчи",
+      "price": 270,
+      "image": "Assets/Soup/soup1.png"
+    },
+    {
+      "id": 2,
+      "title":"Том Ям креветка",
+      "composition": "Тигровые креветки, шампиньоны, рис, черри",
+      "price": 280,
+      "image": "Assets/Soup/soup2.jpg"
+    },
+    {
+      "id": 3,
+      "title":"Том Ям курица",
+      "composition": "Курица, шампиньоны, рис, помидоры черри",
+      "price": 260,
+      "image": "Assets/Soup/soup2.jpg"
+    }
+  ],
+  "sous": [
+
+    {
+      "id": 1,
+      "title":"Васаби",
+      "composition": "",
+      "price": 30,
+      "image": "Assets/Sous/sous1.jpg"
+    },
+    {
+      "id": 2,
+      "title":"Имбирь",
+      "composition": "",
+      "price": 30,
+      "image": "Assets/Sous/sous2.jpg"
+    },
+    {
+      "id": 3,
+      "title":"Свит чили соус",
+      "composition": "",
+      "price": 50,
+      "image": "Assets/Sous/sous3.png"
+    } ,
+    {
+      "id": 4,
+      "title":"Соевый соус",
+      "composition": "",
+      "price": 30,
+      "image": "Assets/Sous/sous4.jpg"
+    },
+    {
+      "id": 5,
+      "title":"Спайси соус",
+      "composition": "",
+      "price": 30,
+      "image": "Assets/Sous/sous5.jpg"
+    }
+  ],
+  "drinks": [
+
+    {
+      "id": 1,
+      "title":"Кола 0.5л",
+      "composition": "",
+      "price": 50,
+      "image": "Assets/Drinks/drinks1.jpg"
+    },
+    {
+      "id": 2,
+      "title":"Кола 1л",
+      "composition": "",
+      "price": 80,
+      "image": "Assets/Drinks/drinks2.png"
+    },
+    {
+      "id": 3,
+      "title":"Компот 1л",
+      "composition": "",
+      "price": 70,
+      "image": "Assets/Drinks/drinks3.jpg"
+    } ,
+    {
+      "id": 4,
+      "title":"Спрайт 0.5л",
+      "composition": "",
+      "price": 50,
+      "image": "Assets/Drinks/drinks4.jpg"
+    },
+    {
+      "id": 5,
+      "title":"Спрайт 1л",
+      "composition": "",
+      "price": 80,
+      "image": "Assets/Drinks/drinks5.jpg"
+    },
+    {
+      "id": 6,
+      "title":"Фанта 0.5л",
+      "composition": "",
+      "price": 50,
+      "image": "Assets/Drinks/drinks6.jpg"
+    },
+    {
+      "id": 7,
+      "title":"Фанта 1л",
+      "composition": "",
+      "price": 80,
+      "image": "Assets/Drinks/drinks7.jpg"
+    }
+  ],
+  "snacks": [
+
+    {
+      "id": 1,
+      "title":"Крылышки баффало",
+      "composition": "Куриные крылышки, фри, соус чили",
+      "price": 450,
+      "image": "Assets/Snacks/snacks1.jpg"
+    },
+    {
+      "id": 2,
+      "title":"Наггетсы",
+      "composition": "Наггетсы, картошка, фри, чили соус",
+      "price": 450,
+      "image": "Assets/Snacks/snacks2.jpg"
+    },
+    {
+      "id": 3,
+      "title":"Клаб курица",
+      "composition": "Курица, лист салата, сыр, помидор 190 гр",
+      "price": 180,
+      "image": "Assets/Snacks/snacks3.jpg"
+    } ,
+    {
+      "id": 4,
+      "title":"Клаб лосось",
+      "composition": "Лосось, лист салата, сыр, помидор 190 гр",
+      "price": 260,
+      "image": "Assets/Snacks/snacks4.jpg"
+    },
+    {
+      "id": 5,
+      "title":"Фри",
+      "composition": "",
+      "price": 100,
+      "image": "Assets/Snacks/snacks5.jpg"
+    }
+  ]
+}
