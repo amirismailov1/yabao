@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
 
 export const getSoup = () => {
     return (dispatch) => {
-        axios('http://localhost:8080/soup')
+        axios('https://yabao.vercel.app/api/soup')
             .then(({data}) => {
                 return dispatch({type:'GETSOUP', arr : data})
             })

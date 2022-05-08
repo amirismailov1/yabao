@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
 
 export const getSous = () => {
     return (dispatch) => {
-        axios('http://localhost:8080/sous')
+        axios('https://yabao.vercel.app/api/sous')
             .then(({data}) => {
                 return dispatch({type:'GETSOUS', arr : data})
             })
