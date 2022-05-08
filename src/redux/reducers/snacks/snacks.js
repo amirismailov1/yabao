@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
 
 export const getSnacks = () => {
     return (dispatch) => {
-        axios('https://yabao.vercel.app/api/snacks')
+        axios('http://localhost:8080/snacks')
             .then(({data}) => {
                 return dispatch({type:'GETSNACKS', arr : data})
             })
