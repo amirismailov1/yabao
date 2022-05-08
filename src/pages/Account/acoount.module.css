@@ -204,6 +204,7 @@ flex-wrap: wrap;
     text-align: center;
     color: var(--pink);
     margin-top: 16px;
+    cursor: pointer;
 }
 .logout{
     background: transparent;
