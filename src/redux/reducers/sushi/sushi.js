@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
 
 export const getSushi = () => {
     return (dispatch) => {
-        axios('https://yabao.vercel.app/sushi')
+        axios('http://localhost:8080/sushi')
             .then(({data}) => {
                 return dispatch({type:'GETSUSHI', arr : data})
             })
