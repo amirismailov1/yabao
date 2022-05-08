@@ -9,3 +9,17 @@
     flex-wrap: wrap;
 row-gap: 30px;
 }
+.block{
+    display: flex;
+    column-gap: 10px;
+
+}
+.back{
+    font-size: 30px;
+    color: var(--pink);
+}
+@media (max-width: 576px) {
+    .row{
+        row-gap: 0;
+    }
+}

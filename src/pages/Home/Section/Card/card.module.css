@@ -9,6 +9,10 @@
     width: 100%;
 
 }
+.cardImg:hover{
+    transform: translateY(6px);
+    transition: 0.5s;
+}
 
 .cardTitle{
     font-weight: 800;
@@ -49,4 +53,30 @@
     transition: 0.3s;
     color:var(--black);
     background: var(--pink);
+}
+@media (max-width: 768px){
+    .card{
+        width: calc(33.33333% - 30px);
+    }
+}
+@media (max-width: 576px){
+    .card{
+        width: calc(50% - 22.5px);
+    }
+
+}
+@media (max-width: 475px) {
+    .cardBlock{
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    .cardTitle{
+        text-align: center;
+        font-size: 18px;
+    }
+}
+@media (max-width: 376px) {
+    .card{
+        width: 100%;
+    }
 }

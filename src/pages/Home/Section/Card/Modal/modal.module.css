@@ -1,0 +1,86 @@
+.modal{
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(32px);
+transition: .5s;
+display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+.modalNon{
+
+    visibility: hidden;
+
+
+}
+.info{
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    padding: 70px 40px ;
+}
+.content{
+    display: flex;
+    column-gap: 30px;
+
+    align-items: center;
+
+
+}
+.img{
+    width: 35%;
+
+}
+.block{
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+}
+.title{
+    font-size: 32px;
+
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+.comp{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    color: #686466;
+
+}
+.price{
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FF2E65;
+}
+.btn{
+    background: var(--pink);
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 28px;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 10px 0;
+
+
+}
+.close{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@ import sous from "./sous/sous";
 import soup from "./soup/soup";
 import sushi from "./sushi/sushi";
 import user from "./user/user";
+import cart from "./cart/cart";
 
 
 const rootReducer = () =>{
@@ -16,7 +17,8 @@ snacks,
     soup,
     sous,
     sushi,
-    user
+    user,
+    cart
 })
 };
 

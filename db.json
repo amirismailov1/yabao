@@ -1,271 +1,442 @@
 {
   "users": [
-
+    {
+      "email": "amir@mail.ru",
+      "password": "$2a$10$ikN.9eGqzAGOHaOmKnysuOQ1DtjdHEhp.0DIjH5bgOgfZ1kfpuPbq",
+      "login": "Amir",
+      "repass": "12345678",
+      "tel": "996550213535",
+      "street": "Шопокова 29",
+      "order": [
+        {
+          "name": "Amir",
+          "tel": "996550213535",
+          "street": "Шопокова 29",
+          "info": "no info",
+          "pay": "Наличными",
+          "money": "550",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 4,
+              "title": "Горячий лосось",
+              "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
+              "price": 300,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            }
+          ],
+          "price": 550,
+          "change": 0,
+          "date": "08.05.2022",
+          "id": "e6487ec8-b77a-475e-9b43-4dcdd4d45d4b"
+        },
+        {
+          "name": "Amir",
+          "tel": "996550213535",
+          "street": "Шопокова 29",
+          "info": "no info",
+          "pay": "Наличными",
+          "money": "1150",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 4,
+              "title": "Горячий лосось",
+              "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
+              "price": 300,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 3
+            }
+          ],
+          "price": 1150,
+          "change": 0,
+          "date": "08.05.2022",
+          "id": "d76a0ef1-43f0-47fb-b38b-a43c579df97a"
+        },
+        {
+          "name": "Amir",
+          "tel": "996550213535",
+          "street": "Шопокова 29",
+          "info": "no info",
+          "pay": "Картой",
+          "money": "1330",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 4,
+              "title": "Горячий лосось",
+              "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
+              "price": 300,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 8,
+              "title": "Чикин темпура",
+              "composition": "Курица, авокадо, сыр, унаги соус 230 гр",
+              "price": 260,
+              "image": "../Assets/Sushi/sushi2.jpg",
+              "count": 3
+            }
+          ],
+          "price": 1330,
+          "change": 0,
+          "date": "08.05.2022",
+          "id": "5455806b-9b5b-4f13-a694-21f3e1ebe4a7"
+        }
+      ],
+      "bonus": 153,
+      "id": 1,
+      "phone": "",
+      "date": ""
+    }
+  ],
+  "call": [
+    {
+      "name": "Amir",
+      "tel": "996550213535",
+      "id": 1
+    },
+    {
+      "name": "Amir",
+      "tel": "1234",
+      "id": 2
+    },
+    {
+      "name": "Amir",
+      "tel": "996550213535",
+      "id": 3
+    },
+    {
+      "name": "Amir",
+      "tel": "996550213535",
+      "id": 4
+    },
+    {
+      "name": "",
+      "tel": "t44",
+      "id": 5
+    },
+    {
+      "name": "",
+      "tel": "2",
+      "id": 6
+    },
+    {
+      "name": "",
+      "tel": "2",
+      "id": 7
+    },
+    {
+      "name": "",
+      "tel": "3",
+      "id": 8
+    },
+    {
+      "name": "",
+      "tel": "5",
+      "id": 9
+    },
+    {
+      "name": "",
+      "tel": "2",
+      "id": 10
+    },
+    {
+      "name": "",
+      "tel": "1",
+      "id": 11
+    },
+    {
+      "name": "Amir",
+      "tel": "352532",
+      "id": 12
+    }
   ],
   "sushi": [
     {
       "id": 1,
-      "title":"Горячая креветка",
+      "title": "Горячая креветка",
       "composition": "Тигровые креветки, сыр, розовый соус, унаги соус 240 гр",
       "price": 280,
       "image": "Assets/Sushi/sushi1.jpg"
     },
     {
       "id": 2,
-      "title":"Горячая курица",
+      "title": "Горячая курица",
       "composition": "Курица, сыр, розовый соус, унаги соус, кунжут 240 гр",
       "price": 220,
       "image": "Assets/Sushi/sushi1.jpg"
     },
     {
       "id": 3,
-      "title":"Горячий краб",
+      "title": "Горячий краб",
       "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
       "price": 250,
       "image": "Assets/Sushi/sushi1.jpg"
     },
     {
       "id": 4,
-      "title":"Горячий лосось",
+      "title": "Горячий лосось",
       "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
       "price": 300,
       "image": "Assets/Sushi/sushi1.jpg"
     },
     {
       "id": 5,
-      "title":"Кани темпура",
+      "title": "Кани темпура",
       "composition": "Снежный краб, авокадо, сыр, унаги соус",
       "price": 290,
       "image": "Assets/Sushi/sushi2.jpg"
     },
     {
       "id": 6,
-      "title":"Саке темпура",
+      "title": "Саке темпура",
       "composition": "Лосось, авокадо, сыр, унаги соус 220 гр",
       "price": 350,
       "image": "Assets/Sushi/sushi2.jpg"
     },
     {
       "id": 7,
-      "title":"Унаги темпура",
+      "title": "Унаги темпура",
       "composition": "Угорь, авокадо, сливочный сыр, унаги соус 240 гр",
       "price": 350,
       "image": "Assets/Sushi/sushi2.jpg"
     },
     {
       "id": 8,
-      "title":"Чикин темпура",
+      "title": "Чикин темпура",
       "composition": "Курица, авокадо, сыр, унаги соус 230 гр",
       "price": 260,
       "image": "Assets/Sushi/sushi2.jpg"
     }
   ],
   "set": [
-
     {
       "id": 1,
-      "title":"4 сезона",
+      "title": "4 сезона",
       "composition": "Горячий краб, Горячий лосось, Горячая креветка, Горячая курица. 32 штуки, 840 грамм",
       "price": 980,
       "image": "Assets/Set/set1.jpg"
     },
     {
       "id": 2,
-      "title":"Запеченный хосомаки",
+      "title": "Запеченный хосомаки",
       "composition": "Ролл лосось, Ролл краб, Ролл угорь, Ролл креветка, Ролл сыр. 30 штук, 580 грамм",
       "price": 650,
       "image": "Assets/Set/set2.jpg"
     },
     {
       "id": 3,
-      "title":"Классика",
+      "title": "Классика",
       "composition": "Филадельфия, Канада, Калифорния. 24 штуки, 720 грамм",
       "price": 1130,
       "image": "Assets/Set/set3.jpg"
     },
     {
       "id": 4,
-      "title":"Романтика",
+      "title": "Романтика",
       "composition": "Филадельфия, Калифорния, Ролл краб под сыром, Хот лосось 4 шт, Фудзияма 4 шт. 30 штук, 840 грамм",
       "price": 1300,
       "image": "Assets/Set/set4.jpg"
     },
     {
       "id": 5,
-      "title":"Сет 1",
+      "title": "Сет 1",
       "composition": "Филадельфия 4 шт, Канада 4 шт, Нью-Йорк 4 шт, Бруклин 4 шт. 16 штук, 520 грамм",
       "price": 730,
       "image": "Assets/Set/set5.jpg"
     },
     {
       "id": 6,
-      "title":"Сет 10",
+      "title": "Сет 10",
       "composition": "Шеф-ролл кунжут, Филадельфия, Мини филадельфия, Бонито, Нью-Йорк. 40 штук, 1170 грамм",
       "price": 1400,
       "image": "Assets/Set/set6.jpg"
     },
     {
       "id": 7,
-      "title":"Сет 11",
+      "title": "Сет 11",
       "composition": "Фила премиум, Канада премиум, Фила делюкс. 24 штуки, 770 грамм",
       "price": 1700,
       "image": "Assets/Set/set7.jpg"
     },
     {
       "id": 8,
-      "title":"Хосомаки",
+      "title": "Хосомаки",
       "composition": "Ролл краб, Ролл лосось, Ролл огурец, Ролл сыр. 24 штуки, 400 грамм",
       "price": 480,
       "image": "Assets/Set/set8.jpg"
     }
   ],
   "soup": [
-
     {
       "id": 1,
-      "title":"Кимчи",
+      "title": "Кимчи",
       "composition": "Кимчи",
       "price": 270,
       "image": "Assets/Soup/soup1.png"
     },
     {
       "id": 2,
-      "title":"Том Ям креветка",
+      "title": "Том Ям креветка",
       "composition": "Тигровые креветки, шампиньоны, рис, черри",
       "price": 280,
       "image": "Assets/Soup/soup2.jpg"
     },
     {
       "id": 3,
-      "title":"Том Ям курица",
+      "title": "Том Ям курица",
       "composition": "Курица, шампиньоны, рис, помидоры черри",
       "price": 260,
       "image": "Assets/Soup/soup2.jpg"
     }
   ],
   "sous": [
-
     {
       "id": 1,
-      "title":"Васаби",
+      "title": "Васаби",
       "composition": "",
       "price": 30,
       "image": "Assets/Sous/sous1.jpg"
     },
     {
       "id": 2,
-      "title":"Имбирь",
+      "title": "Имбирь",
       "composition": "",
       "price": 30,
       "image": "Assets/Sous/sous2.jpg"
     },
     {
       "id": 3,
-      "title":"Свит чили соус",
+      "title": "Свит чили соус",
       "composition": "",
       "price": 50,
       "image": "Assets/Sous/sous3.png"
-    } ,
+    },
     {
       "id": 4,
-      "title":"Соевый соус",
+      "title": "Соевый соус",
       "composition": "",
       "price": 30,
       "image": "Assets/Sous/sous4.jpg"
     },
     {
       "id": 5,
-      "title":"Спайси соус",
+      "title": "Спайси соус",
       "composition": "",
       "price": 30,
       "image": "Assets/Sous/sous5.jpg"
     }
   ],
   "drinks": [
-
     {
       "id": 1,
-      "title":"Кола 0.5л",
+      "title": "Кола 0.5л",
       "composition": "",
       "price": 50,
       "image": "Assets/Drinks/drinks1.jpg"
     },
     {
       "id": 2,
-      "title":"Кола 1л",
+      "title": "Кола 1л",
       "composition": "",
       "price": 80,
       "image": "Assets/Drinks/drinks2.png"
     },
     {
       "id": 3,
-      "title":"Компот 1л",
+      "title": "Компот 1л",
       "composition": "",
       "price": 70,
       "image": "Assets/Drinks/drinks3.jpg"
-    } ,
+    },
     {
       "id": 4,
-      "title":"Спрайт 0.5л",
+      "title": "Спрайт 0.5л",
       "composition": "",
       "price": 50,
       "image": "Assets/Drinks/drinks4.jpg"
     },
     {
       "id": 5,
-      "title":"Спрайт 1л",
+      "title": "Спрайт 1л",
       "composition": "",
       "price": 80,
       "image": "Assets/Drinks/drinks5.jpg"
     },
     {
       "id": 6,
-      "title":"Фанта 0.5л",
+      "title": "Фанта 0.5л",
       "composition": "",
       "price": 50,
       "image": "Assets/Drinks/drinks6.jpg"
     },
     {
       "id": 7,
-      "title":"Фанта 1л",
+      "title": "Фанта 1л",
       "composition": "",
       "price": 80,
       "image": "Assets/Drinks/drinks7.jpg"
     }
   ],
   "snacks": [
-
     {
       "id": 1,
-      "title":"Крылышки баффало",
+      "title": "Крылышки баффало",
       "composition": "Куриные крылышки, фри, соус чили",
       "price": 450,
       "image": "Assets/Snacks/snacks1.jpg"
     },
     {
       "id": 2,
-      "title":"Наггетсы",
+      "title": "Наггетсы",
       "composition": "Наггетсы, картошка, фри, чили соус",
       "price": 450,
       "image": "Assets/Snacks/snacks2.jpg"
     },
     {
       "id": 3,
-      "title":"Клаб курица",
+      "title": "Клаб курица",
       "composition": "Курица, лист салата, сыр, помидор 190 гр",
       "price": 180,
       "image": "Assets/Snacks/snacks3.jpg"
-    } ,
+    },
     {
       "id": 4,
-      "title":"Клаб лосось",
+      "title": "Клаб лосось",
       "composition": "Лосось, лист салата, сыр, помидор 190 гр",
       "price": 260,
       "image": "Assets/Snacks/snacks4.jpg"
     },
     {
       "id": 5,
-      "title":"Фри",
+      "title": "Фри",
       "composition": "",
       "price": 100,
       "image": "Assets/Snacks/snacks5.jpg"

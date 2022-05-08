@@ -4,13 +4,13 @@ import {useNavigate,Link} from 'react-router-dom'
 import {useDispatch} from "react-redux";
 import {useForm} from "react-hook-form";
 import styles from './register.module.css'
-
-
+import {AiOutlineLeft} from "react-icons/ai";
 
 
 const Register = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
 
     const {
         register,
@@ -25,6 +25,8 @@ const Register = () => {
     const registerUser = (data) => {
         dispatch(registerAccount({
             ...data,
+            order: [],
+ bonus:0
         }, navigate))
 
     };
@@ -34,7 +36,11 @@ const Register = () => {
     return (
         <div className={styles.register}>
             <form className={styles.form} onSubmit={handleSubmit(registerUser)}>
-                 <h2 className={styles.title}>Регистрация</h2>
+                <div className={styles.block}>
+                    <Link className={styles.back} to={'/'}><AiOutlineLeft/></Link>
+                    <h3 className={styles.title}>Регистрация</h3>
+
+                </div>
                 <div className={styles.formItem}>
                     <label className={styles.formLabel} htmlFor="login">Имя *</label>
                     <input {...register('login',{
@@ -57,18 +63,21 @@ const Register = () => {
                             message:'Минимум 2 символа'
                         }
 
-                    })} type='email'/>
+                    })} className={styles.formInput} type='email'/>
                 </div>
+                <span className={styles.error}>
+                        {errors.email && errors?.email?.message}
+                    </span>
                 <div className={styles.formItem}>
                     <label className={styles.formLabel} htmlFor={'password'}>Пароль *</label>
                     <input {...register('password',{
                         required : "Это поле обязательно для заполнения",
                         minLength : {
                             value: 6,
-                            message:'Минимум 6 символов'
+                            message:'Минимальное количество символов в пароле: 6. Пожалуйста, введите другой пароль.'
                         }
 
-                    })} type='password'/>
+                    })} className={styles.formInput} type='password'/>
                 </div>
                 <span className={styles.error}>
                         {errors?.password && errors?.password?.message}
@@ -80,7 +89,7 @@ const Register = () => {
                         validate: value =>
                             value === password.current || 'Пароли должны совпадать'
 
-                    })} type='password'/>
+                    })} className={styles.formInput} type='password'/>
                 </div>
                 <span className={styles.error}>
                         {errors?.repass && errors?.repass?.message}
@@ -88,11 +97,8 @@ const Register = () => {
                 <div className={styles.formItem}>
                     <label className={styles.formLabel} htmlFor="tel">Телефон *</label>
                     <input {...register('tel',{
-                        required:'Поле обязательное к заполнению',
-                        pattern: {
-                            // value: /^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$/,
-                            message: "Invalid phone no",
-                        }
+                        required:'Это поле обязательно для заполнения',
+
 
                     })} className={styles.formInput} type="tel" />
                 </div>
@@ -100,29 +106,18 @@ const Register = () => {
                         {errors?.tel && errors?.tel?.message}
                     </span>
                 <div className={styles.formItem}>
-                    <label className={styles.formLabel} htmlFor="street">Улица *</label>
+                    <label className={styles.formLabel} htmlFor="street">Адрес</label>
                     <input {...register('street',{
-                        required : "Это поле обязательно для заполнения",
+
                         minLength : {
                             value: 2,
                             message:'Минимум 2 символа'
                         }
                     })} className={styles.formInput} type="text" />
                 </div>
-                <span className={styles.error}>{errors?.street && errors?.street?.message}</span>
-                 <div className={styles.checkbox}>
-                     <label htmlFor="checkk">С условиями регистрации согласен *</label>
-                     <input className={styles.check}  {...register('checkk',{
-                         required:'Чтобы продолжить, нужно принять условия регистрации'
-                     })}   type="checkbox"/>
-                 </div>
-                <span className={styles.error}>{errors?.checkk && errors?.checkk?.message}</span>
-                <button type="submit">Зарегистрироваться</button>
-                <p className={styles.link}>
-                    Уже есть аккаунт ?   <Link to='/login'>
-                    Войти
-                </Link>
-                </p>
+                <button className={styles.btn} type='submit'>Зарегистрироваться</button>
+
+
 
 
             </form>

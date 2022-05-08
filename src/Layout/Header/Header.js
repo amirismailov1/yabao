@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from  "../../assets/Logo.png"
 import styles from './header.module.css'
 ;
 import {Link} from 'react-router-dom'
+import Popup from "./Popup/Popup";
+
 
 const Header = () => {
-
+ const [isOpen,setIsOpen] = useState(false);
     return (
         <header className={styles.header}>
             <div className="container">
@@ -29,16 +31,17 @@ const Header = () => {
                         </p>  от 31 мин</div>
                     </div>
                     <div className={styles.call}>
-                        <button className={styles.btn}>Заказать звонок</button>
-                        <p className={styles.number}>
-                            8 800 333-36-62
-                        </p>
+                        <button className={styles.btn} type="button" onClick={()=>setIsOpen(true)}>Заказать звонок</button>
+                        <a href='tel:+996555555555' className={styles.number}>
+                           +996 (555) 55 55 55
+                        </a>
                     </div>
 
 
                 </div>
 
             </div>
+            <Popup isOpen={isOpen} setIsOpen={setIsOpen}/>
         </header>
     );
 };

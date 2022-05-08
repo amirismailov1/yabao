@@ -1,10 +1,14 @@
 import React from 'react';
+import img from './notfound.jpg'
+import styles from './notFound.module.css'
+
+
 
 const NotFound = () => {
     return (
-        <div>
-            NotFound
-        </div>
+        <section className={styles.notFound}>
+            <img className={styles.img} src={img} alt="404 Not Found"/>
+        </section>
     );
 };
 

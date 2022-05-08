@@ -9,7 +9,7 @@
     display: flex;
     column-gap: 14px;
     width: 100%;
-
+align-items: center;
 }
 .logoText{
 
@@ -70,6 +70,8 @@
     font-size: 14px;
     line-height: 28px;
     color: #696F7A;
+    cursor: pointer;
+
 }
 .number{
     font-weight: 700;
@@ -79,3 +81,51 @@
     text-transform: uppercase
 }
 
+@media(max-width: 768px) {
+    .top{
+        flex-wrap: wrap;
+
+    }
+    .call{
+        margin: 10px auto 0;
+    }
+}
+@media (max-width: 426px) {
+.title{
+    font-size: 30px;
+}
+    .infoTitle{
+        font-size: 15px;
+    }
+    .infoTime{
+        font-size: 12px;
+    }
+    .number{
+        font-size: 21px;
+        line-height: 30px;
+
+    }
+    .btn{
+        width: 170px;
+    }
+}
+@media (max-width: 376px) {
+    .title{
+        font-size: 25px;
+    }
+    .subtitle{
+        font-size: 8px;
+    }
+    .infoTitle{
+        font-size: 12px;
+    }
+    .infoTime{
+        font-size: 9px;
+    }
+    .number{
+        font-size: 17px;
+    }
+    .btn{
+        width: 165px;
+    }
+}

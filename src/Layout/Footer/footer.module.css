@@ -1,0 +1,33 @@
+.footer{
+    margin-top: 60px;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rights{
+    font-weight: 800;
+    font-size: 19px;
+
+    color: var(--black);
+}
+.number{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: var(--pink);
+    text-transform: uppercase
+}
+@media (max-width: 768px) {
+    .block{
+        flex-wrap: wrap;
+        row-gap: 5px;
+
+    }
+}

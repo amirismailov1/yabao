@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import styles from './section.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {useLocation} from "react-router-dom";
+import {useLocation,Link} from "react-router-dom";
 import Card from "./Card/Card";
 import {getSushi} from "../../../redux/reducers/sushi/sushi";
 import {getSoup} from "../../../redux/reducers/soup/soup";
@@ -9,6 +9,7 @@ import {getSet} from "../../../redux/reducers/set/set";
 import {getDrinks} from "../../../redux/reducers/drinks/drinks";
 import {getSnacks} from "../../../redux/reducers/snacks/snacks";
 import {getSous} from "../../../redux/reducers/sous/sous";
+import {IoIosArrowBack} from 'react-icons/io'
 
 const Section = ({title,path}) => {
     const dispatch = useDispatch();
@@ -41,7 +42,12 @@ const Section = ({title,path}) => {
     return (
         <section className={styles.section}>
             <div className="container">
-           <h2>{title}</h2>
+<div className={styles.block}>
+    <Link style={{display:location.pathname.includes('/menu')? 'block' :'none'}} className={styles.back} to={'/'}>
+        <IoIosArrowBack/>
+    </Link>
+    <h2>{title}</h2>
+</div>
                 <div className={styles.row}>
                     {arr.map((item) => (
                         <Card key={item.id} item={location.pathname.length ? {...item, image: `../${item.image}`} : item}/>

@@ -1,0 +1,93 @@
+.layout{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(32px);
+transition: .6s;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+}
+.layoutNon{
+    transition: .6s;
+   visibility: hidden;
+
+}
+.form{
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 80px ;
+display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+    .title{
+        font-size: 32px;
+
+        color: var(--pink);
+        margin-bottom: 50px;
+    }
+.block{
+    display: flex;
+
+    column-gap: 20px;
+}
+.label{
+    font-size: 13px;
+    line-height: 28px;
+    color: #686466;
+
+    opacity: 0.82;
+}
+.input{
+    border-radius: 8px;
+    border: 1.5px solid #E2E2E9;
+    padding: 5px 0 10px 8px;
+
+}
+.btn {
+    background: var(--pink);
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 28px;
+    padding: 5px 35px 0;
+    width: 165px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.message{
+    border-left:5px solid #2ECC40;
+    border-radius: 0 5px 5px 0;
+    font-size: .85em;
+    padding: 10px 15px;
+    background: rgba(0,0,0,.05);
+    line-height: 1.1;
+
+}
+.close{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .form{
+        padding: 70px;
+    }
+
+}

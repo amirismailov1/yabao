@@ -1,0 +1,258 @@
+.title{
+    font-weight: 700;
+    font-size: 30px;
+}
+.bonus{
+    font-weight: 500;
+    font-size: 15px;
+}
+.row{
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.rowLeft{
+    display: flex;
+    column-gap: 10px;
+}
+.back{
+    font-size: 30px;
+    color: var(--pink);
+}
+.rowRight{
+    display: flex;
+
+    align-items: center;
+}
+.changeBtn{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 13px;
+    border-radius: 6px;
+    border: 1px solid #F0F0F0;
+}
+
+.block{
+
+}
+.blockHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.blockChange{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--pink);
+    cursor: pointer;
+}
+.blockTitle{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--black);
+}
+.blockContent{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.blockCol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.blockColTitle{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(92, 99, 112);
+}
+.blockInput{
+    width: 200px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--black);
+    padding: 5px 16px;
+    border-radius: 8px;
+}
+.blockBtn{
+    margin-top: 20px;
+    width: 100px;
+    padding: 10px 10px;
+    border-radius: 7px;
+    background: var(--pink);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+.item{
+    padding: 16px;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    max-width: 700px;
+
+}
+.itemBlock{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.itemBlockTitle{
+    font-weight: 400;
+    font-size: 14px;
+    color: #A5A5A5;
+
+}
+.itemBlockInfo{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+}
+.top{
+    display: flex;
+    column-gap: 85px;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 16px;
+}
+.itemImg{
+    width: 40px;
+    height: 40px;
+}
+.bottom{
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.border{
+    width: 4px;
+    height: 44px;
+    border-radius: 24px;
+    margin-right: -69px;
+}
+.itemIdDate{
+    display: flex;
+    column-gap: 8px;
+}
+
+.itemDate{
+    color: #A5A5A5;
+    font-weight: 400;
+    font-size: 14px;
+}
+.moreList{
+    display: flex;
+    padding: 12px 0;
+    border-top:1px solid #F0F0F0 ;
+    border-bottom:1px solid #F0F0F0 ;
+    flex-direction: column;
+    row-gap: 12px;
+}
+.moreItem{
+    display: flex;
+flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.moreItemTitle{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--black);
+    width: 150px;
+}
+.moreItemImg{
+    width: 60px;
+    height: 60px;
+}
+.moreItemCount{
+    background: #FFEEE2;
+    border-radius: 6px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--pink);
+}
+.moreItemPrice{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--pink);
+}
+.repeat{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--pink);
+    margin-top: 16px;
+}
+.logout{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--pink);
+    font-weight: 600;
+cursor: pointer;
+}
+
+.error{
+
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 8px;
+
+
+}
+@media (max-width: 768px)  {
+    .row{
+        flex-wrap: wrap;
+
+    }
+    .rowRight{
+        margin: 10px auto 0;
+    }
+    .title{
+        font-size: 26px;
+    }
+    .changeBtn{
+        padding: 10px;
+    }
+
+
+}@media (max-width: 576px){
+.border{
+    display: none;
+}
+}
+@media(max-width: 476px){
+    .top{
+        column-gap: 20px;
+    }
+}
+@media (max-width: 376px) {
+    .itemIdDate{
+        flex-direction: column;
+        row-gap: 5px;
+    }
+}
