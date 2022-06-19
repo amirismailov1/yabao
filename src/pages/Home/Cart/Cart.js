@@ -9,6 +9,7 @@ import empty from './empty.png'
 const Cart = () => {
     const cart = useSelector((store)=> store.cart.cart);
     const open = useSelector((store)=> store.cart.open);
+    const user = useSelector(store=>store.user.user)
     const dispatch = useDispatch()
 
 
@@ -67,11 +68,19 @@ const Cart = () => {
                                 <div className={styles.cartFooterItem}>
                                     <p className={styles.cartFooterTitle}>Баллы</p>
                                     <div className={styles.cartFooterLine}/>
-                                    <p className={styles.itemPrice}>{Math.ceil(cart.reduce((acc, rec) => acc + rec.price*rec.count, 0) / 100 * 5)} </p>
+                                    <p className={styles.itemPrice}>{Math.ceil(cart.reduce((acc, rec) => acc + rec.price*rec.count, 0) / 100 * 3)} </p>
                                 </div>
                                 <button type='button' className={styles.cartFooterBtn} onClick={() => {
-                                    dispatch(closeCart())
-                                    navigate('/orders')
+                                    if (user.email.length){
+                                      dispatch(closeCart());
+                                        navigate('/orders')}
+                                    else{
+                                        alert('Войдите в аккаунт');
+                                        dispatch(closeCart());
+                                        navigate('/register')
+                                    }
+
+
                                 }}>Оформить заказ
                                 </button>
 

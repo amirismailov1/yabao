@@ -57,7 +57,7 @@ export const loginAccount = (obj,navigate) =>{
     return (dispatch) => {
         axios.post('http://localhost:8080/login', obj)
             .then(({data}) => {
-                navigate('/');
+                navigate('/account');
                 localStorage.setItem('user', JSON.stringify(data.user));
                 return dispatch({type: 'ENTER', user: data.user })
 

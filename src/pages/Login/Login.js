@@ -39,7 +39,7 @@ const Login = () => {
                 <div className={styles.formItem}>
                     <label className={styles.formLabel} htmlFor="password">Пароль</label>
                     <input {...register('password')} className={styles.formInput} type={pass?'text':'password'}/>
-                    <span onClick={()=>setPass(!pass)}>{pass?<GoEyeClosed/>:<GoEye/> }</span>
+                    <span className={styles.eye} onClick={()=>setPass(!pass)}>{pass?<GoEyeClosed/>:<GoEye/> }</span>
                 </div>
 
                 <p className={styles.agreement}>Продолжая, вы соглашаетесь со сбором <br/>   и обработкой персональных данных <br/> и пользовательским соглашением</p>

@@ -1,7 +1,37 @@
 .notFound{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+.title{
+    color: var(--pink);
+    font-size: 100px;
+    font-weight: 800;
 
 }
-.img{
-    width: 100%;
+.sub{
+    color: #2E3035;
+    font-size: 30px;
+    opacity: 0.8;
 }
+.btn{
+    border-radius: 8px;
+    background-color: var(--pink);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 7px 25px;
+    cursor: pointer;
+
+}
+.btn a{
+    color: white;
+}
+@media (max-width: 400px) {
+    .sub {
+        font-size: 25px;
+    }
+}
+

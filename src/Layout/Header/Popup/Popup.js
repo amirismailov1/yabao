@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form";
 import styles from './popup.module.css'
 import axios from "axios";
+import {AiOutlineClose} from 'react-icons/ai'
 
 const Popup = ({isOpen,setIsOpen}) => {
 
@@ -52,7 +53,7 @@ reset();
                 <button type="submit" className={styles.btn}>Отправить</button>
                 <p className={styles.message} style={{display:success?'block':'none'}} >Спасибо за ваше сообщение.Оно успешно отправлено</p>
 
-                <span className={styles.close} onClick={()=>setIsOpen(false)}>X</span>
+                <span className={styles.btnClose} onClick={()=>setIsOpen(false)}><AiOutlineClose className={styles.close}/></span>
 
             </form>
         </div>

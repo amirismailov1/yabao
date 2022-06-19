@@ -13,6 +13,7 @@ import {useDispatch} from "react-redux";
 import {getLocalStorage} from "../redux/reducers/user/user";
 import {useSelector} from "react-redux";
 import {getCartLocalStorage} from "../redux/reducers/cart/cart";
+import Modal from "./Modal/Modal";
 
 const Layout = () => {
     const cart = useSelector(store=> store.cart.cart);
@@ -40,10 +41,13 @@ const Layout = () => {
     const location = useLocation();
     return (
         <div>
-            {location.pathname.includes('menu') || location.pathname.includes('orders') || location.pathname.includes('account') ||location.pathname === '/'  ?   <Header/> :''}
+            {
+                location.pathname.includes('login') || location.pathname.includes('register') ? '' :  <Header/>
+            }
 
             <Routes>
                 <Route path='/' element={<Home/>}/>
+
                 <Route path='/menu/:category' element={<Menu/>}/>
                 <Route path='/orders' element={<Orders/>}/>
                 <Route path='/account' element={<Account/>}/>
@@ -52,7 +56,11 @@ const Layout = () => {
                 <Route path='/register' element={<Register/>}/>
 
             </Routes>
-            {location.pathname.includes('menu') || location.pathname.includes('orders') || location.pathname.includes('account') ||location.pathname === '/'  ?   <Footer/> :''}
+            <Modal/>
+            {
+                location.pathname.includes('login') || location.pathname.includes('register') ? '' :  <Footer/>
+            }
+
         </div>
     );
 };

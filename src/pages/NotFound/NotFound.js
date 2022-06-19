@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './notfound.jpg'
+import {Link} from 'react-router-dom'
 import styles from './notFound.module.css'
 
 
@@ -7,7 +7,10 @@ import styles from './notFound.module.css'
 const NotFound = () => {
     return (
         <section className={styles.notFound}>
-            <img className={styles.img} src={img} alt="404 Not Found"/>
+
+            <h4 className={styles.title}>404</h4>
+            <p className={styles.sub}>Страница не найдена :(</p>
+            <button  className={styles.btn} type='button'><Link to={'/'}>На главную</Link></button>
         </section>
     );
 };

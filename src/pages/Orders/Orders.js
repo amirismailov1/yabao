@@ -7,14 +7,16 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeAccount} from "../../redux/reducers/user/user";
 import { v4 as uuidv4 } from 'uuid';
 import {TiTick} from 'react-icons/ti'
+import {type} from "@testing-library/user-event/dist/type";
 
 const Orders = () => {
 
-    const cart = useSelector((store)=> store.cart.cart)
-    const dispatch = useDispatch()
-    const user = useSelector(store=>store.user.user)
+    const cart = useSelector((store)=> store.cart.cart);
+    const dispatch = useDispatch();
+    const user = useSelector(store=>store.user.user);
     const navigate = useNavigate();
     const [popup,setPopup] = useState(false);
+    const [points,setPoints] = useState(0);
 
     const {
         register,
@@ -28,6 +30,7 @@ const Orders = () => {
     });
 
     const createOrder = (data) => {
+
         const toDate = (date) => {
             return new Intl.DateTimeFormat('ru-Ru', {
                 day:'2-digit',
@@ -36,15 +39,17 @@ const Orders = () => {
             }).format(new Date(date))
         };
         dispatch(changeAccount({
-            bonus: user.bonus+Math.ceil(cart.reduce((acc, rec) => acc + rec.price*rec.count , 0) / 100 * 5),
+            bonus: user.bonus+Math.ceil((cart.reduce((acc, rec) => acc + rec.price*rec.count, 0)-points) / 100 * 3) - data.points,
             order:
                 [...user.order,{
                     ...data,
                     info: data.info ? data.info : 'no info',
                     products: cart,
-                    price: cart.reduce((acc, rec) => acc + rec.price*rec.count , 0),
+                    prePrice: cart.reduce((acc, rec) => acc + rec.price*rec.count , 0),
+                    discount: data.points,
+                    price:cart.reduce((acc, rec) => acc + rec.price*rec.count , 0) - data.points,
 
-                    change: data.money - cart.reduce((acc, rec) => acc + rec.price*rec.count , 0),
+                    change: data.money - cart.reduce((acc, rec) => acc + rec.price*rec.count , 0) - data.points,
                     date: toDate(new Date()),
                     id:uuidv4()
                 }]
@@ -57,6 +62,7 @@ const Orders = () => {
             navigate('/');
             reset()
         }),2500);
+        
 
     };
 
@@ -68,6 +74,7 @@ const Orders = () => {
         <section className={styles.order}>
             <div className="container">
                 <h2 className={styles.title}>Оформление заказа</h2>
+
                 <div className={styles.row}>
                     <form  className={styles.form} onSubmit={handleSubmit(createOrder)}>
                         <div className={styles.formItem}>
@@ -127,13 +134,37 @@ const Orders = () => {
                             <input defaultValue={cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)} {...register('money', {
                                 required : 'Это поле обязательно для заполнения',
                                 min : {
-                                    value: cart.reduce((acc,rec)=> acc+rec.price,0),
-                                    message:`Ваша сумма не должна быть меньше ${cart.reduce((acc,rec)=> acc+rec.price*rec.count,0)}`
+                                    value: cart.reduce((acc,rec)=> acc+rec.price,0)-points,
+                                    message:`Ваша сумма не должна быть меньше ${(cart.reduce((acc,rec)=> acc+rec.price*rec.count,0))-points}`
                                 }
                             })}  className={styles.formInput} type="number" />
                         </div>
                         <span className={styles.error}>
                          {errors?.money && errors?.money?.message }
+                    </span>
+                        <div className={styles.formItem}>
+                            <label className={styles.formLabel} htmlFor="points">Использовать баллы</label>
+                            <input  onChangeCapture={(e)=>{
+                                if (+e.target.value <= Math.ceil(cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)/2) && 0<+e.target.value<=user.bonus && +e.target.value>0){
+                                    setPoints(+e.target.value)
+                                }else {setPoints(0)}
+
+                            }
+                            } max={Math.ceil(cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)/2)} className={styles.formInput} type="number" defaultValue={0} {...register('points',{
+                                max:{
+                                    value:(cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0))%2? (cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0))/2 :(cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0))/2 -1
+                                    &&
+                                        user.bonus
+
+                                    ,
+                                    message:`Недостаточно баллов.В наличии : ${user.bonus}`
+
+                                },
+
+                            })}/>
+                        </div>
+                        <span className={styles.error}>
+                         {errors?.points && errors?.points?.message }
                     </span>
                         <div className={styles.formItem}>
                             <label className={styles.formLabel} htmlFor="checkbox">С условиями доставки согласен *</label>
@@ -176,20 +207,31 @@ const Orders = () => {
                             ))}
                         </ul>
                         <div className={styles.cartFooterItem}>
+                            <p className={styles.cartFooterTitle}>Подытог </p>
+                            <div className={styles.cartFooterLine}/>
+                            <p className={styles.itemPrice}>{cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)} С. </p>
+                        </div>
+
+                        <div className={styles.cartFooterItem}>
+                            <p className={styles.cartFooterTitle}>Скидка </p>
+                            <div className={styles.cartFooterLine}/>
+                            <p className={styles.itemPrice}>{points? `${points} С.` : 0} </p>
+                        </div>
+                        <div className={styles.cartFooterItem}>
                             <p className={styles.cartFooterTitle}>Итого </p>
                             <div className={styles.cartFooterLine}/>
-                            <p className={styles.itemPrice}>{cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)} руб. </p>
+                            <p className={styles.itemPrice}> {cart.reduce((acc,rec)=>acc+(rec.price*rec.count),0)-points} С.</p>
                         </div>
                         <div className={styles.cartFooterItem}>
                             <p className={styles.cartFooterTitle}>Баллы</p>
                             <div className={styles.cartFooterLine}/>
-                            <p className={styles.itemPrice}>{Math.ceil(cart.reduce((acc, rec) => acc + rec.price*rec.count, 0) / 100 * 5)} </p>
+                            <p className={styles.itemPrice}>{Math.ceil((cart.reduce((acc, rec) => acc + rec.price*rec.count, 0)-points) / 100 * 3)} </p>
                         </div>
 
 
                     </div>
                 </div>
-                <div className={styles.overlay} style={{display:popup?'block':'none'}}>
+                <div className={popup?styles.overlay : styles.overlayNon}>
                     <div className={styles.popup}>
                         <span className={styles.tick}><TiTick /></span> <p className={styles.popupText}>Спасибо за заказ!</p>
                     </div>

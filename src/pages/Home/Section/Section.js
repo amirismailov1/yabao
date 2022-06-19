@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './section.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation,Link} from "react-router-dom";
@@ -10,16 +10,21 @@ import {getDrinks} from "../../../redux/reducers/drinks/drinks";
 import {getSnacks} from "../../../redux/reducers/snacks/snacks";
 import {getSous} from "../../../redux/reducers/sous/sous";
 import {IoIosArrowBack} from 'react-icons/io'
+import {BsArrowUp} from 'react-icons/bs'
+import {BsArrowDown} from 'react-icons/bs'
+
 
 const Section = ({title,path}) => {
     const dispatch = useDispatch();
 
     const location = useLocation();
+    const [sort,setSort] = useState('');
 
 
 
     const arr = useSelector((store) => store[path][path] );
     useEffect(() => {
+        setSort('');
         switch (path) {
             case 'sushi' : dispatch(getSushi());
                 break;
@@ -38,6 +43,27 @@ const Section = ({title,path}) => {
 
     },[]);
 
+    function compare( a, b ) {
+        if ( a.price < b.price ){
+            return -1;
+        }
+        if ( a.price > b.price ){
+            return 1;
+        }
+        return 0;
+    }
+
+    function compareLess( a, b ) {
+        if ( b.price < a.price ){
+            return -1;
+        }
+        if ( b.price > a.price ){
+            return 1;
+        }
+        return 0;
+    }
+
+
 
     return (
         <section className={styles.section}>
@@ -46,14 +72,28 @@ const Section = ({title,path}) => {
     <Link style={{display:location.pathname.includes('/menu')? 'block' :'none'}} className={styles.back} to={'/'}>
         <IoIosArrowBack/>
     </Link>
-    <h2>{title}</h2>
+    <div className={styles.rowBlock}>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.sortBlock} style={{display:location.pathname.includes('/menu')? 'block' :'none'}}>Сортировать по : <span onClick={()=> setSort('higher')} className={`${styles.sort} ${sort==='higher'? styles.active:''}`} >Цене <BsArrowDown/></span>     <span onClick={()=>setSort('less')} className={`${styles.sort} ${sort==='less' ? styles.active : ''}`}>Цене<BsArrowUp/></span> </p>
+    </div>
 </div>
                 <div className={styles.row}>
-                    {arr.map((item) => (
+                    {sort === 'less' ? arr.sort(compare).map((item) => (
                         <Card key={item.id} item={location.pathname.length ? {...item, image: `../${item.image}`} : item}/>
-                    ))}
+                    ))
+                    :sort==='higher'?
+                            arr.sort(compareLess).map((item) => (
+                                <Card key={item.id} item={location.pathname.length ? {...item, image: `../${item.image}`} : item}/>
+                            ))
+                        :
+                        arr.map((item) => (
+                        <Card key={item.id} item={location.pathname.length ? {...item, image: `../${item.image}`} : item}/>
+                        ))
+                    }
                 </div>
             </div>
+
+
         </section>
     );
 };

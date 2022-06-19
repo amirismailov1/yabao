@@ -7,6 +7,8 @@ import soup from "./soup/soup";
 import sushi from "./sushi/sushi";
 import user from "./user/user";
 import cart from "./cart/cart";
+import modal from "./Modal/modal";
+
 
 
 const rootReducer = () =>{
@@ -18,7 +20,9 @@ snacks,
     sous,
     sushi,
     user,
-    cart
+    cart,
+    modal
+
 })
 };
 

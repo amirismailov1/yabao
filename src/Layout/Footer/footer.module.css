@@ -24,6 +24,10 @@
     color: var(--pink);
     text-transform: uppercase
 }
+.number:hover{
+    opacity: 0.7;
+    transition: 0.4s;
+}
 @media (max-width: 768px) {
     .block{
         flex-wrap: wrap;

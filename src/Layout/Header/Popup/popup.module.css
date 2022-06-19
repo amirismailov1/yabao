@@ -3,17 +3,27 @@
     width: 100%;
     height: 100%;
     background: rgba(25, 25, 25, 0.4);
-    backdrop-filter: blur(32px);
-transition: .6s;
+    backdrop-filter: blur(12px);
+transition: .5s;
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
+    opacity: 1;
+    transform: scale(1);
 
 }
 .layoutNon{
-    transition: .6s;
-   visibility: hidden;
+    z-index: 20 ;
+    transition: .5s;
+   opacity: 0;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+
+
+
+    transform:  scale(0);
 
 }
 .form{
@@ -37,7 +47,7 @@ display: flex;
     }
 .block{
     display: flex;
-
+justify-content: space-between;
     column-gap: 20px;
 }
 .label{
@@ -73,13 +83,24 @@ display: flex;
     line-height: 1.1;
 
 }
-.close{
-    color: white;
+.btnClose{
     font-size: 40px;
+    background: none    ;
+    border: none;
+    color: white;
     position: absolute;
     right: -30px;
     top: -30px;
     cursor: pointer;
+}
+.close{
+    transition: all 800ms ease-in-out;
+}
+
+.close:hover{
+
+    transform: rotate(360deg);
+
 }
 @media (max-width: 768px) {
     .title{
@@ -90,4 +111,30 @@ display: flex;
         padding: 70px;
     }
 
+}
+@media (max-width: 426px) {
+.btnClose{
+    right: -16px;
+    top: -21px;
+    font-size: 30px;
+}
+
+}
+@media (max-width: 376px){
+    .btnClose{
+        right: 20px;
+        top: 15px;
+        color: var(--pink);
+    }
+
+}
+@media (max-width: 321px) {
+    .btnClose{
+        right: 38px;
+
+
+    }
+    .form{
+        padding: 50px;
+    }
 }

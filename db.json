@@ -3,7 +3,7 @@
     {
       "email": "amir@mail.ru",
       "password": "$2a$10$ikN.9eGqzAGOHaOmKnysuOQ1DtjdHEhp.0DIjH5bgOgfZ1kfpuPbq",
-      "login": "Amir",
+      "login": "Амир",
       "repass": "12345678",
       "tel": "996550213535",
       "street": "Шопокова 29",
@@ -14,30 +14,33 @@
           "street": "Шопокова 29",
           "info": "no info",
           "pay": "Наличными",
-          "money": "550",
+          "money": "500",
+          "points": "10",
           "checkbox": true,
           "products": [
             {
-              "id": 4,
-              "title": "Горячий лосось",
-              "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
-              "price": 300,
+              "id": 1,
+              "title": "Горячая креветка",
+              "composition": "Тигровые креветки, сыр, розовый соус, унаги соус 240 гр",
+              "price": 280,
               "image": "../Assets/Sushi/sushi1.jpg",
               "count": 1
             },
             {
-              "id": 3,
-              "title": "Горячий краб",
-              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
-              "price": 250,
+              "id": 2,
+              "title": "Горячая курица",
+              "composition": "Курица, сыр, розовый соус, унаги соус, кунжут 240 гр",
+              "price": 220,
               "image": "../Assets/Sushi/sushi1.jpg",
               "count": 1
             }
           ],
-          "price": 550,
+          "prePrice": 500,
+          "discount": "10",
+          "price": 490,
           "change": 0,
-          "date": "08.05.2022",
-          "id": "e6487ec8-b77a-475e-9b43-4dcdd4d45d4b"
+          "date": "21.05.2022",
+          "id": "3c8ca4e4-5382-48d7-accc-c8051d4a3370"
         },
         {
           "name": "Amir",
@@ -45,7 +48,8 @@
           "street": "Шопокова 29",
           "info": "no info",
           "pay": "Наличными",
-          "money": "1150",
+          "money": "300",
+          "points": "250",
           "checkbox": true,
           "products": [
             {
@@ -62,21 +66,165 @@
               "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
               "price": 300,
               "image": "../Assets/Sushi/sushi1.jpg",
-              "count": 3
+              "count": 1
             }
           ],
-          "price": 1150,
+          "prePrice": 550,
+          "discount": "250",
+          "price": 300,
           "change": 0,
-          "date": "08.05.2022",
-          "id": "d76a0ef1-43f0-47fb-b38b-a43c579df97a"
+          "date": "21.05.2022",
+          "id": "6d1a9594-8193-443e-a686-34e07321e297"
         },
         {
           "name": "Amir",
           "tel": "996550213535",
           "street": "Шопокова 29",
           "info": "no info",
-          "pay": "Картой",
-          "money": "1330",
+          "pay": "Наличными",
+          "money": "750",
+          "points": "20",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 1,
+              "title": "Горячая креветка",
+              "composition": "Тигровые креветки, сыр, розовый соус, унаги соус 240 гр",
+              "price": 280,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 2,
+              "title": "Горячая курица",
+              "composition": "Курица, сыр, розовый соус, унаги соус, кунжут 240 гр",
+              "price": 220,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            }
+          ],
+          "prePrice": 750,
+          "discount": "20",
+          "price": 730,
+          "change": -20,
+          "date": "21.05.2022",
+          "id": "d8908c00-7a6f-437d-ba61-cffa373b9bb3"
+        },
+        {
+          "name": "Амир",
+          "tel": "996550213535",
+          "street": "Шопокова 29",
+          "info": "no info",
+          "pay": "Наличными",
+          "money": "970",
+          "points": "459",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 1,
+              "title": "Горячая креветка",
+              "composition": "Тигровые креветки, сыр, розовый соус, унаги соус 240 гр",
+              "price": 280,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            },
+            {
+              "id": 2,
+              "title": "Горячая курица",
+              "composition": "Курица, сыр, розовый соус, унаги соус, кунжут 240 гр",
+              "price": 220,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 2
+            },
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            }
+          ],
+          "prePrice": 970,
+          "discount": "459",
+          "price": 511,
+          "change": -459,
+          "date": "21.05.2022",
+          "id": "aae31486-7445-42e3-a4e9-f080ca6d8697"
+        }
+      ],
+      "bonus": 16,
+      "id": 1,
+      "phone": "",
+      "date": ""
+    },
+    {
+      "email": "amir2@mail.ru",
+      "password": "$2a$10$j7o13ecIA3VwUxUIdhrV8eiV1DRWDenVaCTIofdubU3d92BlcEOE6",
+      "login": "Amir",
+      "repass": "12345678",
+      "tel": "532532532",
+      "street": "",
+      "order": [
+        {
+          "name": "amir",
+          "tel": "532532532",
+          "street": "Рыскулова 79Б",
+          "info": "no info",
+          "pay": "Наличными",
+          "money": "510",
+          "checkbox": true,
+          "products": [
+            {
+              "id": 8,
+              "title": "Чикин темпура",
+              "composition": "Курица, авокадо, сыр, унаги соус 230 гр",
+              "price": 260,
+              "image": "../Assets/Sushi/sushi2.jpg",
+              "count": 1
+            },
+            {
+              "id": 3,
+              "title": "Горячий краб",
+              "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
+              "price": 250,
+              "image": "../Assets/Sushi/sushi1.jpg",
+              "count": 1
+            }
+          ],
+          "price": 510,
+          "change": 0,
+          "date": "14.05.2022",
+          "id": "6fe8fc57-e748-4108-968d-da234b826fd6"
+        }
+      ],
+      "bonus": 26,
+      "id": 2
+    },
+    {
+      "email": "amir3@mail.ru",
+      "password": "$2a$10$yZR1K4lO9q6dDlEt2m/Wm.h1al1HJhxSNmkIc/OrbmTMDYmUIDbc.",
+      "login": "Амир",
+      "repass": "123456",
+      "tel": "0550213535",
+      "street": "",
+      "order": [
+        {
+          "name": "Амир",
+          "tel": "0550213535",
+          "street": "Рыскулова",
+          "info": "no info",
+          "pay": "Наличными",
+          "money": "850",
+          "points": "0",
           "checkbox": true,
           "products": [
             {
@@ -85,35 +233,27 @@
               "composition": "Снежный краб, сыр, розовый соус, унаги соус 240 гр",
               "price": 250,
               "image": "../Assets/Sushi/sushi1.jpg",
-              "count": 1
+              "count": 2
             },
             {
-              "id": 4,
-              "title": "Горячий лосось",
-              "composition": "Лосось, сыр, розовый соус, унаги соус, кунжут",
-              "price": 300,
-              "image": "../Assets/Sushi/sushi1.jpg",
-              "count": 1
-            },
-            {
-              "id": 8,
-              "title": "Чикин темпура",
-              "composition": "Курица, авокадо, сыр, унаги соус 230 гр",
-              "price": 260,
+              "id": 7,
+              "title": "Унаги темпура",
+              "composition": "Угорь, авокадо, сливочный сыр, унаги соус 240 гр",
+              "price": 350,
               "image": "../Assets/Sushi/sushi2.jpg",
-              "count": 3
+              "count": 1
             }
           ],
-          "price": 1330,
+          "prePrice": 850,
+          "discount": "0",
+          "price": 850,
           "change": 0,
-          "date": "08.05.2022",
-          "id": "5455806b-9b5b-4f13-a694-21f3e1ebe4a7"
+          "date": "21.05.2022",
+          "id": "cc88d285-d72f-4220-961a-cc24d95cb63c"
         }
       ],
-      "bonus": 153,
-      "id": 1,
-      "phone": "",
-      "date": ""
+      "bonus": 26,
+      "id": 3
     }
   ],
   "call": [
@@ -138,44 +278,19 @@
       "id": 4
     },
     {
-      "name": "",
-      "tel": "t44",
-      "id": 5
-    },
-    {
-      "name": "",
-      "tel": "2",
-      "id": 6
-    },
-    {
-      "name": "",
-      "tel": "2",
-      "id": 7
-    },
-    {
-      "name": "",
-      "tel": "3",
-      "id": 8
-    },
-    {
-      "name": "",
-      "tel": "5",
-      "id": 9
-    },
-    {
-      "name": "",
-      "tel": "2",
-      "id": 10
-    },
-    {
-      "name": "",
-      "tel": "1",
-      "id": 11
-    },
-    {
       "name": "Amir",
       "tel": "352532",
       "id": 12
+    },
+    {
+      "name": "amir",
+      "tel": "142124",
+      "id": 13
+    },
+    {
+      "name": "Амир",
+      "tel": "996550213535",
+      "id": 14
     }
   ],
   "sushi": [

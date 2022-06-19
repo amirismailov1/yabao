@@ -4,7 +4,7 @@ import Section from "../Home/Section/Section";
 
 const Menu = () => {
 
-    const params = useParams()
+    const params = useParams();
 
 
     return (

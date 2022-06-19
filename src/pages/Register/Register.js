@@ -116,6 +116,12 @@ const Register = () => {
                     })} className={styles.formInput} type="text" />
                 </div>
                 <button className={styles.btn} type='submit'>Зарегистрироваться</button>
+                <p className={styles.link}>
+                    Уже есть аккаунт ?
+                    <Link to='/login'>
+                        Войти
+                    </Link>
+                </p>
 
 
 

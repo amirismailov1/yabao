@@ -279,7 +279,23 @@
         max-width: none;
     }
     .btnClose{
-        display: none;
+        top: 20px;
+        left: 190px;
+        z-index: 10001;
+        color: var(--pink);
     }
 }
+@media (max-width: 376px){
+    .btnClose{
+        left:160px
+    }
+}
+@media (max-width: 326px) {
+    .btnClose{
+        top: 50px;
+        left: 250px;
+        font-size: 30px;
+    }
+}
+
 

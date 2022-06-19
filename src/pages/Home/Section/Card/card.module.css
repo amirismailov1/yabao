@@ -4,13 +4,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    overflow: hidden;
+    
 }
 .cardImg{
     width: 100%;
 
+
 }
+
 .cardImg:hover{
-    transform: translateY(6px);
+    transform: scale(0.9);
+
     transition: 0.5s;
 }
 
@@ -39,20 +44,45 @@
     color:var(--black)
 }
 .cardBtn{
-    transition: 0.3s;
+    transition: 0.9s;
     font-weight: 700;
     font-size: 14px;
     line-height: 28px;
     color: #FFFFFF;
     border-radius: 10px;
-    background: rgb(63,180,58);
-    background: linear-gradient(124deg, rgba(63,180,58,1) 40%, rgba(252,69,245,1) 66%, rgba(252,69,245,1) 83%);
+    background: rgb(255,46,101);
+    background: linear-gradient(124deg, rgba(255,46,101,1) 0%, rgba(252,69,245,1) 100%);
     padding: 4px 10px;
+    cursor: pointer;
+    border: none;
 }
 .cardBtn:hover{
-    transition: 0.3s;
-    color:var(--black);
-    background: var(--pink);
+    transition: 0.9s;
+    background: rgb(247,106,144);
+    background: linear-gradient(124deg, rgba(247,106,144,1) 0%, rgba(128,65,125,1) 100%);
+}
+.itemCount{
+    display: flex;
+    background: #F3F3F7;
+    border-radius: 8px;
+    color: #686466;
+    padding: 2px 7px;
+    column-gap: 20px;
+    align-items: center;
+    max-width: 83px;
+    margin-top: 10px;
+}
+.itemCountBtn{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+@media (max-width: 931px) {
+    .cardPrice{
+        font-size: 20px;
+    }
 }
 @media (max-width: 768px){
     .card{
@@ -65,18 +95,46 @@
     }
 
 }
-@media (max-width: 475px) {
+
+@media (max-width: 476px) {
     .cardBlock{
         flex-direction: column;
         row-gap: 5px;
+        align-items: flex-start;
     }
     .cardTitle{
-        text-align: center;
-        font-size: 18px;
+
+        font-size: 13px;
     }
-}
-@media (max-width: 376px) {
+    .cardPrice{
+        font-size: 14px;
+    }
+    .cardBtn{
+        margin-top: 10px;
+    }
+    .cardSubtitle{font-size: 11px;
+        line-height: 15px;}
     .card{
+        flex-direction: row;
         width: 100%;
+        align-items: center;
+        column-gap: 10px;
     }
+.cardColumn{
+    width:calc(50% - 5px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+}
+    .cardImg{
+        width:calc(50% - 5px);
+    }
+    .cardTitle{
+        font-size: 16px;
+    }
+    .cardSubtitle{
+        margin: 0;
+    }
+
 }

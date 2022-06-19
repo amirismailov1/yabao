@@ -138,7 +138,7 @@ const Account = () => {
                                             </div>
                                             <div className={styles.itemBlock}>
                                                 <p className={styles.itemBlockTitle}>Сумма заказа</p>
-                                                <p className={styles.itemBlockInfo}>{item.money} ₽</p>
+                                                <p className={styles.itemBlockInfo}>{item.prePrice} ₽</p>
                                             </div>
                                             <div className={styles.itemBlock}>
                                                 <p className={styles.itemBlockTitle}>Оплачено</p>
